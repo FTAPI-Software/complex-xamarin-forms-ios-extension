@@ -26,7 +26,7 @@
                     <Label x:Name="lblAppTitle" AutomationId="errorPage_lblAppTitle" Text="Complex Xamarin Ios Extension Example" FontSize="Small" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
                 </AbsoluteLayout>
                 <AbsoluteLayout Grid.Row="1" Grid.Column="0">
-                    <Image x:Name="imgLogo" AutomationId="errorPage_imgFtapiLogo" Source="ident.png" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" />
+                    <Image x:Name="imgLogo" AutomationId="errorPage_imgLogo" Source="ident.png" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" />
                 </AbsoluteLayout>
             </Grid>
             <Grid Grid.Row="1" ColumnSpacing="0">
