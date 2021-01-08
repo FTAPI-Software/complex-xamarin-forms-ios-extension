@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ComplexXamarinFormsIosExtApp.Pages.ErrorPage">
+    <ContentPage.Content>
+        <Grid Margin="0" x:Name="grdContent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="70*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="15*" />
+                    <RowDefinition Height="85*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*" />
+                </Grid.ColumnDefinitions>
+                <AbsoluteLayout Grid.Row="0" Grid.Column="0">
+                    <Label x:Name="lblAppTitle" AutomationId="errorPage_lblAppTitle" Text="Complex Xamarin Ios Extension Example" FontSize="Small" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </AbsoluteLayout>
+                <AbsoluteLayout Grid.Row="1" Grid.Column="0">
+                    <Image x:Name="imgLogo" AutomationId="errorPage_imgFtapiLogo" Source="ident.png" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" />
+                </AbsoluteLayout>
+            </Grid>
+            <Grid Grid.Row="1" ColumnSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="85*" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="10*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*" />
+                    <ColumnDefinition Width="90*" />
+                    <ColumnDefinition Width="5*" />
+                </Grid.ColumnDefinitions>
+                <AbsoluteLayout Grid.Column="1" Grid.Row="1">
+                    <Image x:Name="imgTick" AutomationId="errorPage_imgExclamation" Source="exclamation_icon.png" AbsoluteLayout.LayoutBounds="0.5,0.5,40,40" AbsoluteLayout.LayoutFlags="PositionProportional" Aspect="AspectFill"/>
+                </AbsoluteLayout>
+                <AbsoluteLayout Grid.Column="1" Grid.Row="2">
+                    <Label x:Name="lblTitle" AutomationId="errorPage_lblTitle" Text="Error" FontSize="Large" FontAttributes="Bold" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </AbsoluteLayout>
+                <AbsoluteLayout Grid.Column="1" Grid.Row="3">
+                    <Label x:Name="lblMessage" AutomationId="errorPage_lblMessage" Text="" FontSize="Small" FontAttributes="Bold" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </AbsoluteLayout>
+                <AbsoluteLayout Grid.Column="1" Grid.Row="5">
+                    <Button x:Name="btnClose" AutomationId="errorPage_btnClose" Text="Close" Clicked="btnClose_Clicked" TextColor="White" BackgroundColor="Red" FontSize="Medium" AbsoluteLayout.LayoutBounds="0.5,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BorderWidth="1" CornerRadius="10" VerticalOptions="Center" />
+                </AbsoluteLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

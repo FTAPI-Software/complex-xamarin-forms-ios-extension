@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="True"
+             mc:Ignorable="d"
+             NavigationPage.HasBackButton="False"
+             x:Class="ComplexXamarinFormsIosExtApp.Pages.MainPage">
+    <ContentPage.Content>
+        <Grid Margin="0" ColumnSpacing="0" x:Name="grdContent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5" />
+                <RowDefinition Height="0" x:Name="rowCancelButtonModal" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="100*" />
+            </Grid.RowDefinitions>
+            <AbsoluteLayout Grid.Column="1" Grid.Row="1">
+                <Button x:Name="btnCancel" AutomationId="mainPage_btnCancel" Text="Cancel" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" HorizontalOptions="Center" IsVisible="False" IsEnabled="False" Clicked="btnCancel_Clicked"/>
+            </AbsoluteLayout>
+            <AbsoluteLayout Grid.Column="1" Grid.Row="2">
+                <Label x:Name="lblAppTitle" AutomationId="mainPage_lblTitle" Text="Complex Xamarin Ios Extension Example" FontSize="Large" FontAttributes="Bold" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            </AbsoluteLayout>
+            <Grid Grid.Column="1" Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="100*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*" />
+                </Grid.ColumnDefinitions>
+                <AbsoluteLayout Grid.Column="0" Grid.Row="0">
+                    <Label x:Name="lblLoginStatus" AutomationId="mainPage_lblLoginStatus" Text="Logged in. Click Close to terminate" FontSize="Medium" AbsoluteLayout.LayoutBounds="0.5,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                </AbsoluteLayout>
+                <AbsoluteLayout Grid.Column="0" Grid.Row="4">
+                    <Button x:Name="btnClose" AutomationId="mainPage_btnClose" TextColor="White" BackgroundColor="Red" Text="Close" Clicked="btnClose_Clicked" FontSize="Medium" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" HorizontalOptions="Fill" BorderWidth="1" CornerRadius="10" VerticalOptions="Center" />
+                </AbsoluteLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ComplexXamarinFormsIosExtApp.Pages.LoginPage">
+    <ContentPage.Content>
+        <Grid Margin="0" ColumnSpacing="0" x:Name="grdContent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5" />
+                <RowDefinition Height="0" x:Name="rowCancelButtonModal" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="100*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="90*" />
+                <ColumnDefinition Width="5*" />
+            </Grid.ColumnDefinitions>
+            <AbsoluteLayout Grid.Column="1" Grid.Row="1">
+                <Button x:Name="btnCancel" AutomationId="LoginPage_btnCancel" Text="Cancel" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" HorizontalOptions="Center" IsVisible="False" IsEnabled="False" Clicked="btnCancel_Clicked"/>
+            </AbsoluteLayout>
+            <AbsoluteLayout Grid.Column="1" Grid.Row="2">
+                <Label x:Name="lblAppTitle" AutomationId="loginPage_lblTitle" Text="Complex Xamarin Ios Extension Example" FontSize="Large" FontAttributes="Bold" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            </AbsoluteLayout>
+            <Grid Grid.Column="1" Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="100*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*" />
+                </Grid.ColumnDefinitions>
+                <AbsoluteLayout Grid.Column="0" Grid.Row="0">
+                    <Entry x:Name="txtServer" AutomationId="loginPage_txtServer" Text="https://" Keyboard="Url"  FontSize="Medium" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" VerticalOptions="Center" HorizontalTextAlignment="Start" />
+                    <Label x:Name="lblLoginStatus" AutomationId="loginPage_lblLoginStatus" Text="Logging in..." FontSize="Medium" AbsoluteLayout.LayoutBounds="0.5,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" IsVisible="False"/>
+                </AbsoluteLayout>
+                <AbsoluteLayout Grid.Column="0" Grid.Row="1">
+                    <Entry x:Name="txtUserName" AutomationId="loginPage_txtUserName" Text="" Keyboard="Email" FontSize="Medium" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" VerticalOptions="Center" HorizontalTextAlignment="Start" />
+                </AbsoluteLayout>
+                <AbsoluteLayout Grid.Column="0" Grid.Row="2">
+                    <Entry x:Name="txtPassword" AutomationId="loginPage_txtPassword" Text="" IsPassword="True" FontSize="Medium" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" VerticalOptions="Center" HorizontalTextAlignment="Start" />
+                    <ActivityIndicator x:Name="spinLoggingIn" AutomationId="loginPage_spinLoggingIn"  AbsoluteLayout.LayoutBounds="0.5,0.5,40,40" AbsoluteLayout.LayoutFlags="PositionProportional" VerticalOptions="Center" HorizontalOptions="Center" Color="Red" IsVisible="False"/>
+                </AbsoluteLayout>
+                <Grid Grid.Column="0" Grid.Row="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*" />
+                        <ColumnDefinition Width="50*" />
+                    </Grid.ColumnDefinitions>
+                    <AbsoluteLayout Grid.Column="0" Grid.Row="0" >
+                        <Label x:Name="lblSavePassword" AutomationId="loginPage_lblSavePassword" Text="Save Password" FontSize="Medium" AbsoluteLayout.LayoutBounds="1,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+                    </AbsoluteLayout>
+                    <AbsoluteLayout Grid.Column="1" Grid.Row="0" >
+                        <Switch x:Name="chkSavePassword" AutomationId="loginPage_chkSavePassword" AbsoluteLayout.LayoutBounds="0,0.5,1,1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="Center" IsToggled="True" HorizontalOptions="End" />
+                    </AbsoluteLayout>
+                </Grid>
+                <AbsoluteLayout Grid.Column="0" Grid.Row="4">
+                    <Button x:Name="btnLogin" AutomationId="loginPage_btnLogin" TextColor="White" BackgroundColor="Red" Text="Login" Clicked="Login_Clicked" FontSize="Medium" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" HorizontalOptions="Fill" BorderWidth="1" CornerRadius="10" VerticalOptions="Center" />
+                </AbsoluteLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
