@@ -1,0 +1,15 @@
+################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/complex-xamarin-forms-ios-extension/ComplexXamarinFormsIosExtApp/bin
+/complex-xamarin-forms-ios-extension/ComplexXamarinFormsIosExtApp/obj
+
+/complex-xamarin-forms-ios-extension/ComplexXamarinFormsIosExtApp.iOS/bin
+/complex-xamarin-forms-ios-extension/ComplexXamarinFormsIosExtApp.iOS/obj
+
+/complex-xamarin-forms-ios-extension/ComplexXamarinFormsIosExtApp.iOS.ActionExtension/bin
+/complex-xamarin-forms-ios-extension/ComplexXamarinFormsIosExtApp.iOS.ActionExtension/obj
+
+/complex-xamarin-forms-ios-extension/packages
+/complex-xamarin-forms-ios-extension/.vs/ComplexXamarinFormsIosExtApp
