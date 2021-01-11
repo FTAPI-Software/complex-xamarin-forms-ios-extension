@@ -105,6 +105,7 @@ namespace ComplexXamarinFormsIosExtApp.Models
             this.UserName = string.Empty;
             this.Password = string.Empty;
             this.ClearSavedPassword();
+            log.Debug("Cleared username and password");
         }
 
         public void ClearSavedPassword()

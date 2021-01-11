@@ -403,6 +403,8 @@ namespace ComplexXamarinFormsIosExtApp.iOS.ActionExtension
             log.Debug("Logging out from Main Page");
             this.mainPage.Closed -= MainPage_Closed;
             this.mainPage.LoggedOut -= MainPage_LoggedOut;
+
+            SessionController.Instance.Logout();
             this.mainPageUIViewController.DismissViewController(false, null);
             this.DisplayLoginPage();
         }
