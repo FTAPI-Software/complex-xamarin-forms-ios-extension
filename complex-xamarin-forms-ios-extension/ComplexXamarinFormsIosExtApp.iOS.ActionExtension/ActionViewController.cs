@@ -291,6 +291,7 @@ namespace ComplexXamarinFormsIosExtApp.iOS.ActionExtension
             log.Debug("Instantiating Main Page...");
             this.mainPage = new MainPageModal();
             this.mainPage.Closed += MainPage_Closed;
+            this.mainPage.LoggedOut += MainPage_LoggedOut;
 
             log.Debug("Creating View Controller from Send Page...");
             this.mainPageUIViewController = mainPage.CreateViewController();
@@ -391,9 +392,19 @@ namespace ComplexXamarinFormsIosExtApp.iOS.ActionExtension
 
         private void MainPage_Closed()
         {
-            log.Debug("Closing Main PAge");
+            log.Debug("Closing Main Page");
+            this.mainPage.Closed -= MainPage_Closed;
+            this.mainPage.LoggedOut -= MainPage_LoggedOut;
             this.mainPageUIViewController.DismissViewController(false, null);
             this.CloseExtension();
+        }
+        private void MainPage_LoggedOut()
+        {
+            log.Debug("Logging out from Main Page");
+            this.mainPage.Closed -= MainPage_Closed;
+            this.mainPage.LoggedOut -= MainPage_LoggedOut;
+            this.mainPageUIViewController.DismissViewController(false, null);
+            this.DisplayLoginPage();
         }
 
         private void ErrorPage_Closed()
