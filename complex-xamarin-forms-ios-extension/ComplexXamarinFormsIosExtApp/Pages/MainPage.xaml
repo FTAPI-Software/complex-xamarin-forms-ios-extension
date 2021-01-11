@@ -16,11 +16,16 @@
                 <RowDefinition Height="50" />
                 <RowDefinition Height="100*" />
             </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="90*" />
+                <ColumnDefinition Width="5*" />
+            </Grid.ColumnDefinitions>
             <AbsoluteLayout Grid.Column="1" Grid.Row="1">
                 <Button x:Name="btnCancel" AutomationId="mainPage_btnCancel" Text="Cancel" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" HorizontalOptions="Center" IsVisible="False" IsEnabled="False" Clicked="btnCancel_Clicked"/>
             </AbsoluteLayout>
             <AbsoluteLayout Grid.Column="1" Grid.Row="2">
-                <Label x:Name="lblAppTitle" AutomationId="mainPage_lblTitle" Text="Complex Xamarin Ios Extension Example" FontSize="Large" FontAttributes="Bold" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <Label x:Name="lblAppTitle" AutomationId="mainPage_lblTitle" Text="Complex Xamarin Ios Extension Example" FontSize="Medium" FontAttributes="Bold" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
             </AbsoluteLayout>
             <Grid Grid.Column="1" Grid.Row="3">
                 <Grid.RowDefinitions>
@@ -35,10 +40,10 @@
                     <ColumnDefinition Width="100*" />
                 </Grid.ColumnDefinitions>
                 <AbsoluteLayout Grid.Column="0" Grid.Row="0">
-                    <Label x:Name="lblLoginStatus" AutomationId="mainPage_lblLoginStatus" Text="Logged in. Click Close to terminate" FontSize="Medium" AbsoluteLayout.LayoutBounds="0.5,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                    <Label x:Name="lblLoginStatus" AutomationId="mainPage_lblLoginStatus" Text="Logged in" FontSize="Medium" AbsoluteLayout.LayoutBounds="0.5,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
                 </AbsoluteLayout>
                 <AbsoluteLayout Grid.Column="0" Grid.Row="4">
-                    <Button x:Name="btnClose" AutomationId="mainPage_btnClose" TextColor="White" BackgroundColor="Red" Text="Close" Clicked="btnClose_Clicked" FontSize="Medium" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" HorizontalOptions="Fill" BorderWidth="1" CornerRadius="10" VerticalOptions="Center" />
+                    <Button x:Name="btnLogout" AutomationId="mainPage_btnLogot" TextColor="White" BackgroundColor="Red" Text="Logout" Clicked="btnLogout_Clicked" FontSize="Medium" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" HorizontalOptions="Fill" BorderWidth="1" CornerRadius="10" VerticalOptions="Center" />
                 </AbsoluteLayout>
             </Grid>
         </Grid>

@@ -35,7 +35,7 @@ namespace ComplexXamarinFormsIosExtApp.Pages
 
         #region Methods
 
-        protected override void DisplayLoginError(string errorMessage)
+        protected override void DisplayError(string errorMessage)
         {
             this.AuthorizationCompleted?.Invoke(false, errorMessage);
         }

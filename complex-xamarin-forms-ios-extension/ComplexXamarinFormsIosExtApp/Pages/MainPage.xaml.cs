@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComplexXamarinFormsIosExtApp.Controllers;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -32,9 +33,16 @@ namespace ComplexXamarinFormsIosExtApp.Pages
 
         #region Methods
 
-        protected async virtual void Close()
+        protected virtual void Close()
         {
-            await Navigation.PopAsync();
+            //Do Nothing
+        }
+
+        protected async virtual void Logout()
+        {
+            SessionController.Instance.Logout();
+            await Navigation.PushAsync(new LoginPage());
+            Navigation.RemovePage(this);
         }
 
         #endregion
@@ -46,12 +54,13 @@ namespace ComplexXamarinFormsIosExtApp.Pages
             log.Debug("Cancel Clicked");
 
             this.Close();
-        }
-        private void btnClose_Clicked(object sender, EventArgs e)
-        {
-            log.Debug("Close Clicked");
 
-            this.Close();
+        }
+        private void btnLogout_Clicked(object sender, EventArgs e)
+        {
+            log.Debug("Logout Clicked");
+
+            this.Logout();
         }
 
         #endregion

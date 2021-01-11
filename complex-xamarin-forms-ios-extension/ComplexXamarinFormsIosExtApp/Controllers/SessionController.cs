@@ -113,6 +113,7 @@ namespace ComplexXamarinFormsIosExtApp.Controllers
 
         public void Logout()
         {
+            this.userAccount.Clear();
             this.isloggedIn = false;
         }
 

@@ -113,7 +113,7 @@ namespace ComplexXamarinFormsIosExtApp.Pages
                 }
                 else
                 {
-                    this.DisplayError("Invalid loging Details");
+                    this.DisplayError("Invalid login Details");
                 }
             }
         }
@@ -124,16 +124,6 @@ namespace ComplexXamarinFormsIosExtApp.Pages
             {
                 this.loginCancellationTokenSource.Cancel();
             }
-        }
-
-        protected virtual void DisplayLoginError(string errorMessage)
-        {
-            if (!string.IsNullOrWhiteSpace(errorMessage))
-            {
-                log.Error("Error during Authorization: " + errorMessage);
-                this.DisplayError(errorMessage);
-            }
-            this.EnableInput(true);
         }
 
         public void EnableInput(bool enabled)
@@ -165,11 +155,13 @@ namespace ComplexXamarinFormsIosExtApp.Pages
             });
         }
 
-        private void DisplayError(string erroMessage)
+        protected virtual void DisplayError(string errorMessage)
         {
-            if (!string.IsNullOrWhiteSpace(erroMessage))
+            log.Error("Error during Authorization: " + errorMessage);
+
+            if (!string.IsNullOrWhiteSpace(errorMessage))
             {
-                DisplayAlert("Error", erroMessage, "OK");
+                DisplayAlert("Error", errorMessage, "OK");
             }
         }
 
@@ -203,7 +195,7 @@ namespace ComplexXamarinFormsIosExtApp.Pages
                 else
                 {
                     this.loginInProgress = false;
-                    this.DisplayLoginError(errorMessage);
+                    this.DisplayError(errorMessage);
                     this.EnableInput(true);
                 }
             });

@@ -22,7 +22,7 @@
                 <Button x:Name="btnCancel" AutomationId="LoginPage_btnCancel" Text="Cancel" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" HorizontalOptions="Center" IsVisible="False" IsEnabled="False" Clicked="btnCancel_Clicked"/>
             </AbsoluteLayout>
             <AbsoluteLayout Grid.Column="1" Grid.Row="2">
-                <Label x:Name="lblAppTitle" AutomationId="loginPage_lblTitle" Text="Complex Xamarin Ios Extension Example" FontSize="Large" FontAttributes="Bold" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <Label x:Name="lblAppTitle" AutomationId="loginPage_lblTitle" Text="Complex Xamarin Ios Extension Example" FontSize="Medium" FontAttributes="Bold" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
             </AbsoluteLayout>
             <Grid Grid.Column="1" Grid.Row="3">
                 <Grid.RowDefinitions>

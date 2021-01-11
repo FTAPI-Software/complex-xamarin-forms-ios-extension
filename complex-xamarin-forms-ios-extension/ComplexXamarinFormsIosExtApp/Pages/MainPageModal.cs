@@ -8,12 +8,14 @@ namespace ComplexXamarinFormsIosExtApp.Pages
         #region Delegates
 
         public delegate void CloseHandler();
+        public delegate void LogoutHandler();
 
         #endregion
 
         #region Events
 
         public event CloseHandler Closed;
+        public event LogoutHandler LoggedOut;
 
         #endregion
 
@@ -25,7 +27,6 @@ namespace ComplexXamarinFormsIosExtApp.Pages
             {
                 this.BtnCancel.IsEnabled = true;
                 this.BtnCancel.IsVisible = true;
-                this.BtnCancel.Text = "Cancel";
                 this.RowCancelButtonModal.Height = new GridLength(60, GridUnitType.Absolute);
             }
         }
@@ -37,6 +38,11 @@ namespace ComplexXamarinFormsIosExtApp.Pages
         protected override void Close()
         {
             this.Closed?.Invoke();
+        }
+
+        protected override void Logout()
+        {
+            this.LoggedOut?.Invoke();
         }
 
         #endregion
