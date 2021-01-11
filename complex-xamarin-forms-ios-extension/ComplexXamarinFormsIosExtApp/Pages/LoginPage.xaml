@@ -37,14 +37,14 @@
                     <ColumnDefinition Width="100*" />
                 </Grid.ColumnDefinitions>
                 <AbsoluteLayout Grid.Column="0" Grid.Row="0">
-                    <Entry x:Name="txtServer" AutomationId="loginPage_txtServer" Text="https://" Keyboard="Url"  FontSize="Medium" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" VerticalOptions="Center" HorizontalTextAlignment="Start" />
+                    <Entry x:Name="txtServer" AutomationId="loginPage_txtServer" Text="https://" Placeholder="Server Address" Keyboard="Url"  FontSize="Medium" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" VerticalOptions="Center" HorizontalTextAlignment="Start" />
                     <Label x:Name="lblLoginStatus" AutomationId="loginPage_lblLoginStatus" Text="Logging in..." FontSize="Medium" AbsoluteLayout.LayoutBounds="0.5,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" IsVisible="False"/>
                 </AbsoluteLayout>
                 <AbsoluteLayout Grid.Column="0" Grid.Row="1">
-                    <Entry x:Name="txtUserName" AutomationId="loginPage_txtUserName" Text="" Keyboard="Email" FontSize="Medium" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" VerticalOptions="Center" HorizontalTextAlignment="Start" />
+                    <Entry x:Name="txtUserName" AutomationId="loginPage_txtUserName" Text="" Placeholder="User Name" Keyboard="Email" FontSize="Medium" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" VerticalOptions="Center" HorizontalTextAlignment="Start" />
                 </AbsoluteLayout>
                 <AbsoluteLayout Grid.Column="0" Grid.Row="2">
-                    <Entry x:Name="txtPassword" AutomationId="loginPage_txtPassword" Text="" IsPassword="True" FontSize="Medium" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" VerticalOptions="Center" HorizontalTextAlignment="Start" />
+                    <Entry x:Name="txtPassword" AutomationId="loginPage_txtPassword" Text="" Placeholder="Password" IsPassword="True" FontSize="Medium" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" VerticalOptions="Center" HorizontalTextAlignment="Start" />
                     <ActivityIndicator x:Name="spinLoggingIn" AutomationId="loginPage_spinLoggingIn"  AbsoluteLayout.LayoutBounds="0.5,0.5,40,40" AbsoluteLayout.LayoutFlags="PositionProportional" VerticalOptions="Center" HorizontalOptions="Center" Color="Red" IsVisible="False"/>
                 </AbsoluteLayout>
                 <Grid Grid.Column="0" Grid.Row="3">

@@ -53,6 +53,7 @@ namespace ComplexXamarinFormsIosExtApp
 
             if (currentPage != null)
             {
+                //If current page presented is LoginPage, refresh it just in case credentials have been entered in the Application Extension
                 LoginPage loginPage = currentPage as LoginPage;
 
                 if (loginPage != null)
