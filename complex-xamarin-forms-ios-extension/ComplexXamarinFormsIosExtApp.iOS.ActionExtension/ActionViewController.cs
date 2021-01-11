@@ -350,7 +350,6 @@ namespace ComplexXamarinFormsIosExtApp.iOS.ActionExtension
             // Return any edited content to the host app.
             // This template doesn't do anything, so we just echo the passed-in items.
             log.Info("Closing Extension...");
-            SessionController.DisposeSession();
             ExtensionContext.CompleteRequest(ExtensionContext.InputItems, null);
         }
 
