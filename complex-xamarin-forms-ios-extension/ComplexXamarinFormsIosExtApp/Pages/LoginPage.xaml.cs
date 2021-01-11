@@ -190,6 +190,7 @@ namespace ComplexXamarinFormsIosExtApp.Pages
             {
                 if (success)
                 {
+                    this.SaveCredentials(SessionController.Instance.UserAccount);
                     this.DisplayMainPage();
                 }
                 else
