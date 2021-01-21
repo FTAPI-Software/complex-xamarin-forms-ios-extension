@@ -11,13 +11,11 @@ Create an "App Group" for your iOS Application and iOS Extension so that they ca
 Ensure that you tick the Group capability for both these new "App Id"s and after registering these "App Ids" edit them to used the Group you created above.
 2. Pull the branch
 3. Edit the Info.plist files for both the Container Application and its Extension. Set the "Bundle Identifier" to the respective "App Id" you created in Step 1.
-4. In the Project Properties for both the "ComplexXamarinFormsIosExtApp.iOS" and "ComplexXamarinFormsIosExtApp.iOS.ActionExtension" projects setup your Bundle Signing for your development configs to use your development certificate
-5. Edit the Entitlements.plist. Under App Groups add your Group identifier you created in Step 1.
-6. Edit the IosLogManager.cs and change the GROUP_ID to your App Group name you created in step 1. e.g. "group.com.[your company name].ComplexXamarinFormsIosExtApp.iOS"
-7. Edit the IosSharedSettingsManager.cs and Add your Team ID and company name to the ACCESS_GROUP identifier. Set the GROUP_ID to your App Group name you created in step 1.
-8. Edit the Entitlements.plist files in both iOS projects, Set the com.apple.security.application-groups value to your App Group name you created in step 1. Then add your Team ID and company name to the keychain-access-groups value field.
-9. Edit the Info.plist files in both iOS projects, Set the CFBundleIdentifier value to the respective Bundle Id's you created in step 1.
-10. You can now run the App in the iPhone Simulator by selecting the "Debug" configuration and "iPhoneSimulator" platform.
+4. Edit the Entitlements.plist files in both iOS projects, Set the com.apple.security.application-groups value to your App Group name you created in step 1. Then add your Team ID and company name to the keychain-access-groups value field.
+5. Edit the IosLogManager.cs and change the GROUP_ID to your App Group name you created in step 1. e.g. "group.com.[your company name].ComplexXamarinFormsIosExtApp.iOS"
+6. Edit the IosSharedSettingsManager.cs and Add your Team ID and company name to the ACCESS_GROUP identifier. Set the GROUP_ID to your App Group name you created in step 1.
+7. In the Project Properties for both the "ComplexXamarinFormsIosExtApp.iOS" and "ComplexXamarinFormsIosExtApp.iOS.ActionExtension" projects setup your Bundle Signing for your development configs to use your development certificate. Using the Automatic Provisioning option will really help you run the development builds here.
+8. You can now run the App in the iPhone Simulator by selecting the "Debug" configuration and "iPhoneSimulator" platform.
 
 ### How does the code work? ###
 
