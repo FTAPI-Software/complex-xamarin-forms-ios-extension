@@ -11,8 +11,8 @@ namespace ComplexXamarinFormsIosExtApp.iOS
         #region Fields
 
         private const string SERVICE_NAME = "ComplexXamarinFormsIosExtApp";
-        private const string ACCESS_GROUP = "[Team ID].com.[your companyname].ComplexXamarinformsiIosExtApp.iOS";
-        private const string GROUP_ID = "group.com.[your companyname].ComplexXamarinformsiIosExtApp.iOS";
+        private const string ACCESS_GROUP = "[Team ID].com.[your companyname].ComplexXamarinformsIosExtApp.iOS";
+        private const string GROUP_ID = "group.com.[your companyname].ComplexXamarinformsIosExtApp.iOS";
 
         private static NSUserDefaults nsUserDefaults;
 

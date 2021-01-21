@@ -17,7 +17,7 @@ namespace ComplexXamarinFormsIosExtApp.iOS
     /// </summary>
     public class IosLogManager : ILogManager
     {
-        private const string GROUP_ID = "group.com.[your companyname].ComplexXamarinformsiIosExtApp.iOS";
+        private const string GROUP_ID = "group.com.[your companyname].ComplexXamarinformsIosExtApp.iOS";
 
         private bool isInitialized;
 
