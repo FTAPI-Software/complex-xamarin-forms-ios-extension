@@ -6,13 +6,15 @@ The repo provide sample code for devlopers looking for a more complex example of
 
 ### How do I run this code? ###
 1. Login to your Apple Developer account at: https://developer.apple.com/. 
-Create an "App Group" for your iOS Application and iOS Extension so that they can share data. It will be similar to: "group.com.companyname.ComplexXamarinformsiIosExtApp.iOS".
-- Create an "App Id" for your Main iOS Application (Container Application) and a seperate "App Id" for the iOS Extension for that Application. e.g. "com.companyname.ComplexXamarinformsIosExtApp.iOS" and  "com.companyname.ComplexXamarinformsiIosExtApp.iOS.ActionExtension". Ensure that you tick the Group capability for both these new "App Id"s and add in the Group you created above.
+Create an "App Group" for your iOS Application and iOS Extension so that they can share data. It will be similar to: "group.com.[your companyname].ComplexXamarinformsiIosExtApp.iOS".
+- Create an "App Id" for your Main iOS Application (Container Application) and a seperate "App Id" for the iOS Extension for that Application. e.g. "com.[your companyname].ComplexXamarinformsIosExtApp.iOS" and  "com.[your companyname].ComplexXamarinformsiIosExtApp.iOS.ActionExtension". Ensure that you tick the Group capability for both these new "App Id"s and add in the Group you created above.
 2. Pull the branch
 3. Edit the Info.plist files for both the Container Application and its Extension. Set the "Bundle Identifier" to the respective "App Id" you created in Step 1.
 4. In the Project Properties for both the "ComplexXamarinformsiIosExtApp.iOS" and "ComplexXamarinformsiIosExtApp.iOS.ActionExtension" projects setup your Bundle Signing to use your development certificate
 5. Edit the Entitlements.plist. Under App Groups add your Group identifier you created in Step 1.
-6. You can now run the App in the iPhone Simulator by selecting the "Debug" configuration and "iPhoneSimulator" platform.
+6. Edit the IosLogManager.cs and change the GROUP_ID to your App Group name you created in step 1. e.g. "group.com.[your companyname].ComplexXamarinformsiIosExtApp.iOS"
+7. Edit the IosSharedSettingsManager.cs and Add your Team ID and company name to the ACCESS_GROUP identifier. Set the GROUP_ID to your App Group name you created in step 1.
+8. You can now run the App in the iPhone Simulator by selecting the "Debug" configuration and "iPhoneSimulator" platform.
 
 ### How does the code work? ###
 
