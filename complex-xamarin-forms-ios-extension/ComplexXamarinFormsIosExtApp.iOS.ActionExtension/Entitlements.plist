@@ -4,11 +4,11 @@
 	<dict>
 		<key>com.apple.security.application-groups</key>
 		<array>
-			<string>group.com.[your company name].ComplexXamarinformsIosExtApp.iOS</string>
+			<string>group.com.[your company name].ComplexXamarinFormsIosExtApp.iOS</string>
 		</array>
 		<key>keychain-access-groups</key>
 		<array>
-			<string>[Team ID].com.[your company name].ComplexXamarinformsIosExtApp.iOS</string>
+			<string>[Team ID].com.[your company name].ComplexXamarinFormsIosExtApp.iOS</string>
 		</array>
 	</dict>
 </plist>
