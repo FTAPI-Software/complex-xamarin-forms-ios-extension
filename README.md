@@ -17,6 +17,10 @@ Ensure that you tick the Group capability for both these new "App Id"s and after
 7. In the Project Properties for both the "ComplexXamarinFormsIosExtApp.iOS" and "ComplexXamarinFormsIosExtApp.iOS.ActionExtension" projects setup your Bundle Signing for your development configs to use your development certificate. Using the Automatic Provisioning option will really help you run the development builds here.
 8. You can now run the App in the iPhone Simulator by selecting the "Debug" configuration and "iPhoneSimulator" platform.
 
+#### iPhoneSimulator combined logging limitations ####
+Please note that the iPhoneSimulator (at time of writting) is not able to write the log to the same shared file location, so the Action Extension application will log to its default file location: "${specialfolder:folder=MyDocuments}/../Library/Logs/ComplexXamarinFormsIosExtAppActionExtension.log"
+When debugging on an actual devices this does not seem to be an issue and only one log file is written to.
+
 ### How does the code work? ###
 
 #### Running the Application from the Icon: ####
