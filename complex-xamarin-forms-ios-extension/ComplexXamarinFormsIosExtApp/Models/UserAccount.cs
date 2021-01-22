@@ -33,15 +33,6 @@ namespace ComplexXamarinFormsIosExtApp.Models
 
         #region Constructors
 
-        public UserAccount(string server, string userName, string password, bool savePassword)
-        {
-            this.Server = server;
-            this.UserName = userName;
-            this.Password = password;
-            this.SavePassword = savePassword;
-            this.Save();
-        }
-
         public UserAccount()
         {
             this.Load();
@@ -76,6 +67,8 @@ namespace ComplexXamarinFormsIosExtApp.Models
 
         public void Save()
         {
+            log.Debug("Saving Server: " + this.Server + " UserName: " + this.UserName + " SavePassword: " + this.SavePassword.ToString());
+
             this.preferences.Set(SERVER_ADDRESS, this.Server);
             this.preferences.Set(USER_NAME, this.UserName);
             this.preferences.Set(SAVE_PASSWORD, this.SavePassword);
@@ -102,6 +95,7 @@ namespace ComplexXamarinFormsIosExtApp.Models
 
         public void Clear()
         {
+            log.Debug("Clearing UserName: " + this.UserName + " and Password");
             this.UserName = string.Empty;
             this.Password = string.Empty;
             this.ClearSavedPassword();
