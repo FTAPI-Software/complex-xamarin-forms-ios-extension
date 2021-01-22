@@ -1,5 +1,6 @@
 ﻿using ComplexXamarinFormsIosExtApp.Controllers;
 using System;
+using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -44,6 +45,19 @@ namespace ComplexXamarinFormsIosExtApp.Pages
             await Navigation.PushAsync(new LoginPage());
             Navigation.RemovePage(this);
         }
+
+        protected void LoadImage(Stream selectedImageStream)
+        {
+            try
+            {
+                this.imgSelectedImage.Source = ImageSource.FromStream(() => selectedImageStream);
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex, "Error loading image");
+            }
+        }
+
 
         #endregion
 

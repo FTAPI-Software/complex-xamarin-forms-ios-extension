@@ -289,7 +289,7 @@ namespace ComplexXamarinFormsIosExtApp.iOS.ActionExtension
         private void DisplayMainPage()
         {
             log.Debug("Instantiating Main Page...");
-            this.mainPage = new MainPageModal();
+            this.mainPage = new MainPageModal(attachments);
             this.mainPage.Closed += MainPage_Closed;
             this.mainPage.LoggedOut += MainPage_LoggedOut;
 

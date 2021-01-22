@@ -1,5 +1,6 @@
-﻿using Xamarin.Forms;
-using ComplexXamarinFormsIosExtApp.Models;
+﻿using System.Collections.Generic;
+using System.IO;
+using Xamarin.Forms;
 
 namespace ComplexXamarinFormsIosExtApp.Pages
 {
@@ -21,13 +22,18 @@ namespace ComplexXamarinFormsIosExtApp.Pages
 
         #region Contsructors
 
-        public MainPageModal()
+        public MainPageModal(List<Stream> attachments) : base()
         {
             if (Device.RuntimePlatform == Device.iOS)
             {
                 this.BtnCancel.IsEnabled = true;
                 this.BtnCancel.IsVisible = true;
                 this.RowCancelButtonModal.Height = new GridLength(60, GridUnitType.Absolute);
+            }
+
+            if (attachments != null && attachments.Count > 0)
+            {
+                base.LoadImage(attachments[0]);
             }
         }
 
