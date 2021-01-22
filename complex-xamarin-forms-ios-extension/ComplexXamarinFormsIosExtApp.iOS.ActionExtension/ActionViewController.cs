@@ -347,9 +347,14 @@ namespace ComplexXamarinFormsIosExtApp.iOS.ActionExtension
 
         private void CloseExtension()
         {
+            log.Info("Closing Extension...");
+
+            //Static variables can remain for re-use if the Extension runs again from the same instance of the container application. In this
+            //demo app this causes more harm than good so we dispose of the session so that it is re-loaded from IosSharedSettings manager next launch
+            SessionController.DisposeSession();
+
             // Return any edited content to the host app.
             // This template doesn't do anything, so we just echo the passed-in items.
-            log.Info("Closing Extension...");
             ExtensionContext.CompleteRequest(ExtensionContext.InputItems, null);
         }
 

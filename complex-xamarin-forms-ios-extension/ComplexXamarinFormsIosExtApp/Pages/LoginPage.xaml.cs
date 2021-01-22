@@ -14,7 +14,7 @@ namespace ComplexXamarinFormsIosExtApp.Pages
     {
         #region Fields
 
-        private readonly NLog.Logger log = Utilities.LoggerFactory.GetCurrentClassLogger();
+        protected readonly NLog.Logger log = Utilities.LoggerFactory.GetCurrentClassLogger();
         private bool loginInProgress;
         protected CancellationTokenSource loginCancellationTokenSource;
 
@@ -101,7 +101,7 @@ namespace ComplexXamarinFormsIosExtApp.Pages
             }
             else
             {
-                bool passed = SessionController.Instance.ValidateLoginFields(this.txtServer.Text.Trim(), this.txtUserName.Text.Trim());
+                bool passed = SessionController.Instance.ValidateLoginFields(this.txtServer.Text.Trim(), this.txtUserName.Text.Trim(), this.txtPassword.Text);
                 if (passed)
                 {
                     this.loginInProgress = true;

@@ -68,9 +68,9 @@ namespace ComplexXamarinFormsIosExtApp.Controllers
 
         #region Methods
 
-        public bool ValidateLoginFields(string server, string userName)
+        public bool ValidateLoginFields(string server, string userName, string password)
         {
-            if (string.IsNullOrWhiteSpace(server) || string.IsNullOrWhiteSpace(userName) || server.Equals("https://", StringComparison.InvariantCultureIgnoreCase))
+            if (string.IsNullOrWhiteSpace(server) || string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(password) || server.Equals("https://", StringComparison.InvariantCultureIgnoreCase))
             {
                 return false;
             }
@@ -126,7 +126,7 @@ namespace ComplexXamarinFormsIosExtApp.Controllers
         {
             if (instance != null)
             {
-                instance.Logout();
+                instance.ClearAccountCache();
                 instance = null;
             }
         }
