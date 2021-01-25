@@ -46,8 +46,10 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignKey></CodesignKey>
-    <CodesignProvision></CodesignProvision>
+    <CodesignKey>
+    </CodesignKey>
+    <CodesignProvision>
+    </CodesignProvision>
     <MtouchNoSymbolStrip>false</MtouchNoSymbolStrip>
     <MtouchFloat32>true</MtouchFloat32>
   </PropertyGroup>
@@ -60,8 +62,10 @@
     <LangVersion>default</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <CodesignKey></CodesignKey>
-    <CodesignProvision></CodesignProvision>
+    <CodesignKey>
+    </CodesignKey>
+    <CodesignProvision>
+    </CodesignProvision>
     <MtouchArch>x86_64</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_iOS|iPhone'">
@@ -73,8 +77,10 @@
     <LangVersion>default</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <CodesignKey></CodesignKey>
-    <CodesignProvision></CodesignProvision>
+    <CodesignKey>
+    </CodesignKey>
+    <CodesignProvision>
+    </CodesignProvision>
     <BuildIpa>true</BuildIpa>
     <IpaIncludeArtwork>false</IpaIncludeArtwork>
     <IpaPackageName>ComplexXamarinFormsIosExtApp</IpaPackageName>
@@ -176,10 +182,22 @@
     <ImageAsset Include="Assets.xcassets\ident.imageset\ident3x.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\message.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\image_icon.imageset\image_icon.pdf">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\image_icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\message.imageset\message.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\message.imageset\message1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\message.imageset\message2.png">
       <Visible>false</Visible>
     </ImageAsset>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
