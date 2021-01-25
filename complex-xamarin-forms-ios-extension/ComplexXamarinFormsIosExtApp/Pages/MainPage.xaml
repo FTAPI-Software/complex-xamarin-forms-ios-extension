@@ -41,7 +41,7 @@
                     <Label x:Name="lblLoginStatus" AutomationId="mainPage_lblLoginStatus" Text="Logged in" FontSize="Medium" AbsoluteLayout.LayoutBounds="0.5,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
                 </AbsoluteLayout>
                 <AbsoluteLayout Grid.Column="0" Grid.Row="1">
-                    <Image x:Name="imgSelectedImage" AutomationId="mailPage_imgSelectedImage" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" />
+                    <Image x:Name="imgSelectedImage" AutomationId="mailPage_imgSelectedImage" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Source="message.png" />
                 </AbsoluteLayout>
                 <AbsoluteLayout Grid.Column="0" Grid.Row="2">
                     <Button x:Name="btnLogout" AutomationId="mainPage_btnLogot" TextColor="White" BackgroundColor="Red" Text="Logout" Clicked="btnLogout_Clicked" FontSize="Medium" AbsoluteLayout.LayoutBounds="0,0.5,1,40" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" HorizontalOptions="Fill" BorderWidth="1" CornerRadius="10" VerticalOptions="Center" />
