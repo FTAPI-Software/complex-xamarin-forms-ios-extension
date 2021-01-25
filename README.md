@@ -4,14 +4,14 @@ A complex example of a Xamarin iOS Application Action Extension that uses applic
 ### What is this repository for? ###
 The repo provides sample code for devlopers looking for a more complex example of a Xamarin iOS Application Action Extension that uses multiple pages, application groups (com.apple.security.application-groups) to share data, keychain access groups (keychain-access-groups) for securely storing passwords and the NLog library for logging.
 
-[Container App Demo](images/container-demo-normal-lowfr.gif)
+![Container App Demo](images/container-demo-normal-lowfr.gif)
 
-[Extension App Demo](images/extensions-demo-normal-lowfr.gif)
+![Extension App Demo](images/extensions-demo-normal-lowfr.gif)
 
 ### How do I run this code? ###
 1. Login to your Apple Developer account at: https://developer.apple.com/. 
-Create an "App Group" for your iOS Application and iOS Extension so that they can share data. It will be similar to: "group.com.[your company name].ComplexXamarinFormsIosExtApp.iOS".
-- Create an "App Id" for your Main iOS Application (Container Application) and a seperate "App Id" for the iOS Extension for that Application e.g. for your Bundle Id's use from the Main iOS Application use something like "com.[your company name].ComplexXamarinFormsIosExtApp.iOS" and for your Extension application something like "com.[your company name].ComplexXamarinFormsIosExtApp.iOS.ActionExtension". 
+  - Create an "App Group" for your iOS Application and iOS Extension so that they can share data. It will be similar to: "group.com.[your company name].ComplexXamarinFormsIosExtApp.iOS".
+  - Create an "App Id" for your Main iOS Application (Container Application) and a seperate "App Id" for the iOS Extension for that Application e.g. for your Bundle Id's use from the Main iOS Application use something like "com.[your company name].ComplexXamarinFormsIosExtApp.iOS" and for your Extension application something like "com.[your company name].ComplexXamarinFormsIosExtApp.iOS.ActionExtension". 
 Ensure that you tick the Group capability for both these new "App Id"s and after registering these "App Ids" edit them to used the Group you created above.
 2. Pull the branch
 3. Edit the Info.plist files for both the Container Application and its Extension. Set the "Bundle Identifier" to the respective "App Id" you created in Step 1.
