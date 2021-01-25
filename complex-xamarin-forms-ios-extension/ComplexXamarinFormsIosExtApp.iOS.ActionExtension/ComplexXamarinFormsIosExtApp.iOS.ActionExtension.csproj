@@ -47,9 +47,11 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignKey></CodesignKey>
+    <CodesignKey>
+    </CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignProvision></CodesignProvision>
+    <CodesignProvision>
+    </CodesignProvision>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <MtouchNoSymbolStrip>false</MtouchNoSymbolStrip>
     <MtouchFloat32>true</MtouchFloat32>
@@ -76,7 +78,8 @@
     <ConsolePause>false</ConsolePause>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodesignKey>)</CodesignKey>
-    <CodesignProvision></CodesignProvision>
+    <CodesignProvision>
+    </CodesignProvision>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
@@ -122,10 +125,22 @@
     <ImageAsset Include="Assets.xcassets\ident.imageset\ident3x.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\message.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\image_icon.imageset\image_icon.pdf">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\image_icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\message.imageset\message.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\message.imageset\message1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\message.imageset\message2.png">
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
