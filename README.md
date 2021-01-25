@@ -1,12 +1,13 @@
 # complex-xamarin-forms-ios-extension
 A complex example of a Xamarin iOS Application Action Extension that uses application groups, keychain access groups and NLog.
 
+#### There is currently an issue that stops the Extension running on actual devices when compiled with Xamarin 14.4.1.3 SDK or later! ####
+Please see the "Known Issues" section at the end of this readme for clarification.
+
 ### What is this repository for? ###
 The repo provides sample code for devlopers looking for a more complex example of a Xamarin iOS Application Action Extension that uses multiple pages, application groups (com.apple.security.application-groups) to share data, keychain access groups (keychain-access-groups) for securely storing passwords and the NLog library for logging.
 
-![Container App Demo](images/container-demo-normal-lowfr.gif)
-
-![Extension App Demo](images/extensions-demo-normal-lowfr.gif)
+![Container App Demo](images/container-demo-normal-lowfr.gif) ![Extension App Demo](images/extensions-demo-normal-lowfr.gif)
 
 ### How do I run this code? ###
 1. Login to your Apple Developer account at: https://developer.apple.com/. 
@@ -20,10 +21,6 @@ Ensure that you tick the Group capability for both these new "App Id"s and after
 6. Edit the IosSharedSettingsManager.cs and Add your Team ID and company name to the ACCESS_GROUP identifier. Set the GROUP_ID to your App Group name you created in step 1.
 7. In the Project Properties for both the "ComplexXamarinFormsIosExtApp.iOS" and "ComplexXamarinFormsIosExtApp.iOS.ActionExtension" projects setup your Bundle Signing for your development configs to use your development certificate. Using the Automatic Provisioning option will really help you run the development builds here.
 8. You can now run the App in the iPhone Simulator by selecting the "Debug" configuration and "iPhoneSimulator" platform.
-
-#### iPhoneSimulator combined logging limitations ####
-Please note that the iPhoneSimulator (at time of writting) is not able to write the log to the same shared file location, so the Action Extension application will log to its default file location: "${specialfolder:folder=MyDocuments}/../Library/Logs/ComplexXamarinFormsIosExtAppActionExtension.log"
-When debugging on an actual devices this does not seem to be an issue and only one log file is written to.
 
 ### How does the code work? ###
 
@@ -43,6 +40,11 @@ In ActionViewController.LoadAttachments() the attachments streams are Asynchrono
 
 The Login page has been written to display an additonal "Cancel" Button at the top of the page when run for the Action Extension. This is because Action Extensions are meant to have a short lifecycle. You either perform your task or exit. They are not designed to be suspended and resumed etc...
 
-### Who do I talk to? ###
+### Hey! Some of this code could be more efficient, refactored or use better comments to make it clearer! ###
+Yep, please excuse some of the mess as this example was made in a hurry. You are welcome to branch and make a pull request and I will review it when I get some spare time.
 
-* Tim Hobbs
+### Known Issues ###
+- Action Extension does not launch on an actual device when compiled with Xamarin 14.4.1.3 SDK or later! This is partly the reason this Repo exists. See https://github.com/xamarin/xamarin-macios/issues/10167.
+- The iPhoneSimulator (at time of writting) is not able to write the log to the same shared file location, so the Action Extension application will log to its default file location: "${specialfolder:folder=MyDocuments}/../Library/Logs/ComplexXamarinFormsIosExtAppActionExtension.log"
+When debugging on an actual devices this does not seem to be an issue and only one log file is written to.
+- The Action Extension does not launch quite in fullscreen on the iPhone and on the iPad it is very much smaller than fullscreen. I have (as you can see in the ActionController.cs) tried to get fullscreen working but it really does not want to. It could be my use of Grids to construct the page layouts, I am not sure.
