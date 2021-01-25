@@ -4,6 +4,10 @@ A complex example of a Xamarin iOS Application Action Extension that uses applic
 ### What is this repository for? ###
 The repo provides sample code for devlopers looking for a more complex example of a Xamarin iOS Application Action Extension that uses multiple pages, application groups (com.apple.security.application-groups) to share data, keychain access groups (keychain-access-groups) for securely storing passwords and the NLog library for logging.
 
+[Container App Demo](images/container-demo-normal-lowfr.gif)
+
+[Extension App Demo](images/extensions-demo-normal-lowfr.gif)
+
 ### How do I run this code? ###
 1. Login to your Apple Developer account at: https://developer.apple.com/. 
 Create an "App Group" for your iOS Application and iOS Extension so that they can share data. It will be similar to: "group.com.[your company name].ComplexXamarinFormsIosExtApp.iOS".
