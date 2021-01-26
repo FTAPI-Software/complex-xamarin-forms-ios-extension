@@ -28,8 +28,10 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignKey></CodesignKey>
-    <CodesignProvision></CodesignProvision>
+    <CodesignKey>
+	</CodesignKey>
+    <CodesignProvision>
+	</CodesignProvision>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchFloat32>false</MtouchFloat32>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
@@ -47,11 +49,12 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>
-    </CodesignKey>
+	</CodesignKey>
     <CodesignProvision>
-    </CodesignProvision>
+	</CodesignProvision>
     <MtouchNoSymbolStrip>false</MtouchNoSymbolStrip>
     <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_iOS|iPhoneSimulator'">
     <OutputPath>bin\iPhoneSimulator\Release_iOS\</OutputPath>
