@@ -46,12 +46,11 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignKey>
-    </CodesignKey>
-    <CodesignProvision>
-    </CodesignProvision>
+    <CodesignKey></CodesignKey>
+    <CodesignProvision></CodesignProvision>
     <MtouchNoSymbolStrip>false</MtouchNoSymbolStrip>
     <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_iOS|iPhoneSimulator'">
     <OutputPath>bin\iPhoneSimulator\Release_iOS\</OutputPath>
@@ -204,11 +203,6 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.iOS" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Xamarin.IQKeyboardManager">
-      <Version>1.4.1</Version>
-    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

@@ -30,8 +30,6 @@ namespace ComplexXamarinFormsIosExtApp.iOS
             Popup.Init();
             global::Xamarin.Forms.Forms.Init();
 
-            IQKeyboardManager.SharedManager.Enable = true;
-
             LoadApplication(new App());
 
             #if ENABLE_TEST_CLOUD

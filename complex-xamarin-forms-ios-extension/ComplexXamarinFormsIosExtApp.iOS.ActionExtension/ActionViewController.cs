@@ -46,7 +46,6 @@ namespace ComplexXamarinFormsIosExtApp.iOS.ActionExtension
         {
             Popup.Init();
             Forms.Init();
-            IQKeyboardManager.SharedManager.Enable = true;
             LoggerFactory.Initialize();
 
             //Register Dependencies manually for use by Xamarin dependency service. This avoids needing duplicate code with the namespace iOS.ActionExtension
