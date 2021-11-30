@@ -1,9 +1,9 @@
-﻿using NLog;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Xamarin.Forms;
 using ComplexXamarinFormsIosExtApp.Interfaces;
+using ComplexXamarinFormsIosExtApp.Models;
 
 namespace ComplexXamarinFormsIosExtApp.Utilities
 {
@@ -22,7 +22,7 @@ namespace ComplexXamarinFormsIosExtApp.Utilities
             }
         }
 
-        public static Logger GetCurrentClassLogger()
+        public static ILogger GetCurrentClassLogger()
         {
             if (!isInitialized)
             {

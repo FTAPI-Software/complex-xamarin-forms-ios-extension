@@ -1,11 +1,11 @@
-﻿using NLog;
+﻿using ComplexXamarinFormsIosExtApp.Models;
 
 namespace ComplexXamarinFormsIosExtApp.Interfaces
 {
     public interface ILogManager
     {
         void Initialize();
-        Logger GetCurrentClassLogger();
+        ILogger GetCurrentClassLogger();
         void ChangeMinimumLogLevel(LogLevel logLevel);
         string GetCurrentLogFilePath();
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using ComplexXamarinFormsIosExtApp.Interfaces;
 using ComplexXamarinFormsIosExtApp.Models;
 using ComplexXamarinFormsIosExtApp.Utilities;
 
@@ -26,7 +27,7 @@ namespace ComplexXamarinFormsIosExtApp.Controllers
 
         protected UserAccount userAccount;
         protected bool isloggedIn;
-        private readonly NLog.Logger log = LoggerFactory.GetCurrentClassLogger();
+        private readonly ILogger log = LoggerFactory.GetCurrentClassLogger();
 
         #endregion
 

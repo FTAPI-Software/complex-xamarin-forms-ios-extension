@@ -1,12 +1,13 @@
-﻿using ComplexXamarinFormsIosExtApp.Pages;
-using NLog;
+﻿using ComplexXamarinFormsIosExtApp.Interfaces;
+using ComplexXamarinFormsIosExtApp.Models;
+using ComplexXamarinFormsIosExtApp.Pages;
 using Xamarin.Forms;
 
 namespace ComplexXamarinFormsIosExtApp
 {
     public partial class App : Application
     {
-        private Logger log;
+        private ILogger log;
 
         public App()
         {
@@ -15,7 +16,7 @@ namespace ComplexXamarinFormsIosExtApp
             Utilities.LoggerFactory.Initialize();
             log = Utilities.LoggerFactory.GetCurrentClassLogger();
 
-            Utilities.LoggerFactory.ChangeMinimumLogLevel(NLog.LogLevel.Debug);
+            Utilities.LoggerFactory.ChangeMinimumLogLevel(LogLevel.Debug);
 
             MainPage = new NavigationPage(new LoginPage());
         }

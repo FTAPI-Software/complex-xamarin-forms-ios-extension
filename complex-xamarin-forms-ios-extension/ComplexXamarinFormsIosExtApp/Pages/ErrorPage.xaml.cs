@@ -1,6 +1,7 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ComplexXamarinFormsIosExtApp.Utilities;
+using ComplexXamarinFormsIosExtApp.Interfaces;
 
 namespace ComplexXamarinFormsIosExtApp.Pages
 {
@@ -9,7 +10,7 @@ namespace ComplexXamarinFormsIosExtApp.Pages
     {
         #region Fields
 
-        private readonly NLog.Logger log = LoggerFactory.GetCurrentClassLogger();
+        private readonly ILogger log = LoggerFactory.GetCurrentClassLogger();
 
         #endregion
 

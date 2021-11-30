@@ -17,7 +17,7 @@ namespace ComplexXamarinFormsIosExtApp.Models
 
         #region Fields
 
-        private readonly NLog.Logger log = Utilities.LoggerFactory.GetCurrentClassLogger();
+        private readonly ILogger log = Utilities.LoggerFactory.GetCurrentClassLogger();
         private readonly ISettingsManager preferences = DependencyService.Get<ISettingsManager>();
 
         #endregion

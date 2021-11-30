@@ -4,6 +4,7 @@ using System.Threading;
 using Xamarin.Forms;
 using ComplexXamarinFormsIosExtApp.Controllers;
 using ComplexXamarinFormsIosExtApp.Models;
+using ComplexXamarinFormsIosExtApp.Interfaces;
 
 namespace ComplexXamarinFormsIosExtApp.Pages
 {
@@ -14,7 +15,7 @@ namespace ComplexXamarinFormsIosExtApp.Pages
     {
         #region Fields
 
-        protected readonly NLog.Logger log = Utilities.LoggerFactory.GetCurrentClassLogger();
+        protected readonly ILogger log = Utilities.LoggerFactory.GetCurrentClassLogger();
         private bool loginInProgress;
         protected CancellationTokenSource loginCancellationTokenSource;
 
