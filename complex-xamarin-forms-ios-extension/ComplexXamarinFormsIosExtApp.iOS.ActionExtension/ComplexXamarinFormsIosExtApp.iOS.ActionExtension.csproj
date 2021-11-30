@@ -93,6 +93,9 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <Compile Include="..\ComplexXamarinFormsIosExtApp.iOS\IosLogger.cs">
+      <Link>IosLogger.cs</Link>
+    </Compile>
     <Compile Include="..\ComplexXamarinFormsIosExtApp.iOS\IosLogManager.cs">
       <Link>IosLogManager.cs</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -107,7 +110,6 @@
     </Compile>
     <Compile Include="ActionViewController.cs" />
     <InterfaceDefinition Include="MainInterface.storyboard" />
-    <EmbeddedResource Include="NLog.config" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\exclamation_icon.imageset\exclamation_icon.pdf">
@@ -170,11 +172,6 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.iOS" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="NLog">
-      <Version>4.7.12</Version>
-    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.AppExtension.CSharp.targets" />
   <Target Name="BeforeBuild" Condition=" $(SetBuildNumber) == true ">

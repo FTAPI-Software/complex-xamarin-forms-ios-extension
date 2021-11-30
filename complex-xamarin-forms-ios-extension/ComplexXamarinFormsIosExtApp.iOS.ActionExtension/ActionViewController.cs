@@ -1,17 +1,16 @@
 ﻿using ComplexXamarinFormsIosExtApp.Controllers;
 using ComplexXamarinFormsIosExtApp.Interfaces;
+using ComplexXamarinFormsIosExtApp.Models;
 using ComplexXamarinFormsIosExtApp.Pages;
 using ComplexXamarinFormsIosExtApp.Utilities;
 using Foundation;
 using MobileCoreServices;
-using NLog;
 using Rg.Plugins.Popup;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using UIKit;
-using Xamarin;
 using Xamarin.Forms;
 
 namespace ComplexXamarinFormsIosExtApp.iOS.ActionExtension
@@ -20,7 +19,7 @@ namespace ComplexXamarinFormsIosExtApp.iOS.ActionExtension
     {
         #region Fields
 
-        private Logger log;
+        private ILogger log;
 
         private UIAlertController loadingUIAlertController;
         private UIViewController previousViewController;
